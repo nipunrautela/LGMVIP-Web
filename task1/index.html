@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fonts from FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/d704d714ed.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="main-heading">My ToDo List</h1>
+    </header>
+
+    <main>
+      <div id="errorModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Missing Detail</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>Fill all the required columns</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="mainform" class="content">
+        <form action="" id="todo-form" class="mx-auto">
+          <div>
+            <h2>Create Task</h2>
+          </div>
+          <div class="row input-group mb-3">
+            <div class="col-6">
+              <label for="task-name" class="form-label">
+                Task Name<span class="required"></span>
+              </label>
+              <input
+                type="text"
+                id="task-name"
+                class="form-control"
+                placeholder="Task Name"
+                aria-label="Task Name"
+                required
+              />
+            </div>
+            <div class="col-4">
+              <label for="task-deadline" class="form-label">
+                Task Deadline
+              </label>
+              <input
+                type="Date"
+                id="task-deadline"
+                class="form-control"
+                placeholder="Task Deadline"
+                aria-label="Task Deadline"
+              />
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-8">
+              <label for="task-description" class="form-label"
+                >Task Description</label
+              >
+              <textarea
+                id="task-description"
+                class="form-control"
+                rows="10"
+              ></textarea>
+            </div>
+          </div>
+          <input
+            type="submit"
+            id="task-submit-button"
+            class="btn btn-primary"
+          />
+        </form>
+      </section>
+      <section id="mainlist" class="content">
+        <table
+          id="task-table"
+          class="table table-primary text-center"
+        >
+          <thead>
+            <tr>
+              <th scope="col">+</th>
+              <th scope="col">Task</th>
+              <th scope="col">Deadline</th>
+              <th scope="col">Description</th>
+              <th scope="col">X</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer-title">&copy; Nipun Rautela 2022</p>
+      <ul class="footer-nav">
+        <li>
+          <a href="https://github.com/nipunrautela" target="_blank" class="fa-brands fa-github icon"></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/nipunrautela" target="_blank" class="fa-brands fa-linkedin-in icon"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="fa-brands fa-instagram icon"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="fa-brands fa-twitter icon"></a>
+        </li>
+        <li>
+          <a href="" target="_blank" class="fa-brands fa-facebook icon"></a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Bootstrap Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Scripts -->
+    <script src="index.js" defer></script>
+  </body>
+</html>
