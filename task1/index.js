@@ -67,6 +67,8 @@ function createTableItem(id, name, date, description) {
   tr.append(statusTd, nameTd, dateTd, descriptionTd, deleteTd);
 
   taskTableBody.append(tr);
+
+  return tr;
 }
 
 function getTaskFormDetails() {
@@ -93,6 +95,7 @@ submitButton.addEventListener("click", function (e) {
     formDetails["task-deadline"],
     formDetails["task-description"]
   );
-  console.log(item);
+  //   console.log(item);
+  todoList.push(item);
   taskForm.reset();
 });
